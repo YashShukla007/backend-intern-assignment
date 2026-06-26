@@ -1,0 +1,142 @@
+{
+  "info": {
+    "_postman_id": "ba146733-9778-459d-90fe-5fc3869d4eaa",
+    "name": "Backend Internship Assignment APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56191394",
+    "_collection_link": "https://go.postman.co/collection/56191394-ba146733-9778-459d-90fe-5fc3869d4eaa?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET All Quotes",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "POST Create Quote",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "GET Quote By ID",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "POST Analyze Quote",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "POST Analyze Quote",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/quotes/{{quoteId}}/analyze",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "quotes",
+                "{{quoteId}}",
+                "analyze"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "61"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 26 Jun 2026 07:20:17 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=72"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Quote has already been analyzed\"\n}"
+        },
+        {
+          "name": "POST Analyze Quote",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/quotes/{{quoteId}}/analyze",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "quotes",
+                "{{quoteId}}",
+                "analyze"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "433"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 26 Jun 2026 09:23:50 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=72"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Quote analyzed successfully\",\n    \"data\": {\n        \"id\": \"0c447060-b552-45d9-afbb-30f51b52860c\",\n        \"customer\": \"XYZ Ltd\",\n        \"project\": \"Airport Expansion\",\n        \"estimatedValue\": 350000,\n        \"status\": \"NEW\",\n        \"createdDate\": \"2026-06-26T09:12:33.053Z\",\n        \"analysis\": {\n            \"quoteId\": \"0c447060-b552-45d9-afbb-30f51b52860c\",\n            \"risk\": \"LOW\",\n            \"confidence\": 92,\n            \"missingItems\": \"Signed NDA, Technical Specification Document\",\n            \"analyzedAt\": \"2026-06-26T09:23:50.134Z\"\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "PATCH Update Quote Status",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
