@@ -1,5 +1,16 @@
-node_modules
-# Keep environment variables out of version control
+node_modules/
+
+# Environment variables
 .env
 
+# Generated Prisma client
 /src/generated/prisma
+
+# Build output
+dist/
+
+# Coverage reports
+coverage/
+
+# SQLite temporary file
+prisma/dev.db-journal
